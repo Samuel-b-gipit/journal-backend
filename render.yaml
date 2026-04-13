@@ -2,7 +2,7 @@ services:
   - type: web
     name: journal-backend
     runtime: node
-    buildCommand: npm install --include=dev && npx prisma generate && npm run build
+    buildCommand: npm ci && npm run build
     startCommand: npx prisma migrate deploy && npm start
     envVars:
       - key: NODE_ENV
